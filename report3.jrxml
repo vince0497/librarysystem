@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="288" pageHeight="432" columnWidth="248" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc881e73-e824-4280-8e40-1eae98013ca1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="assess" class="java.lang.String"/>
+	<field name="penalty" class="java.lang.String"/>
+	<field name="stud_no" class="java.lang.String"/>
+	<field name="fullname" class="java.lang.String"/>
+	<field name="date_bor" class="java.lang.String"/>
+	<field name="str_isbn" class="java.lang.String"/>
+	<field name="str_title" class="java.lang.String"/>
+	<field name="cash" class="java.lang.String"/>
+	<field name="changed_cash" class="java.lang.String"/>
+	<field name="date_as" class="java.lang.String"/>
+	<field name="str_copy" class="java.lang.String"/>
+	<field name="title_report" class="java.lang.String"/>
+	<field name="subtitle" class="java.lang.String"/>
+	<field name="rate" class="java.lang.String"/>
+	<field name="day_missed" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="248" height="32" uuid="ea10f80a-a1cd-46d3-b847-d91450e4e265"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title_report}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="33" width="248" height="20" uuid="1909a5f9-dfa4-4f40-91bd-4c465181f869"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subtitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="223" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="92" width="248" height="20" uuid="00f12a19-1efc-4fc3-9265-1f6dce385700"/>
+				<textFieldExpression><![CDATA[$F{str_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="72" width="248" height="20" uuid="4b82c268-cf28-46c9-a91d-f78b5418e877"/>
+				<textFieldExpression><![CDATA[$F{str_isbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="112" width="248" height="20" uuid="b4bfdc8a-69fe-40e4-9433-0070f092488d"/>
+				<textFieldExpression><![CDATA[$F{str_copy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="248" height="20" uuid="a9fe7762-1c47-4083-ab2d-051beb1a63fd"/>
+				<textFieldExpression><![CDATA[$F{fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="248" height="20" uuid="e84013fc-bc58-4447-800c-a1cb07c0f22c"/>
+				<textFieldExpression><![CDATA[$F{stud_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="41" width="248" height="20" uuid="dcfed21a-cbfb-4089-9255-c601264dc56d"/>
+				<textFieldExpression><![CDATA[$F{date_bor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="191" width="248" height="15" uuid="a0ed3b75-2113-44c6-86ba-b98a82de0694"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penalty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-3" y="176" width="248" height="15" forecolor="#000000" uuid="2db6fe49-18f0-49a4-b6e0-273340a15228"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="206" width="245" height="15" uuid="1e289946-40d1-4e1f-b0db-7584fea0f7fd"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{changed_cash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="161" width="248" height="15" forecolor="#000000" uuid="209b9ba8-c0e2-4734-9add-74a83f17aee7"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{day_missed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="146" width="248" height="15" forecolor="#000000" uuid="0fd77a14-0a67-4d9f-9260-047cc295079a"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="245" height="20" uuid="ef6b8a43-959e-43a1-8c8a-83636eeb8e96"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{assess}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="245" height="20" uuid="b2d1c125-97c9-416f-b96e-8af4e2e39341"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{date_as}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
